@@ -1,0 +1,73 @@
+.export-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: #1f1f1f;
+  color: white;
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #ff7300;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.card-header {
+  background: #ff7300;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.card-footer {
+  padding: 12px;
+  font-size: 16px;
+  background: #333;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #222;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  text-align: left;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.close-btn {
+  background: #ff7300;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
