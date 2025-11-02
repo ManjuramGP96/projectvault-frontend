@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Signup from './Student/Signup';
 import Login from './Shared/Login';
 import AdminSignup from './Admin/AdminSignup';
@@ -12,15 +12,16 @@ const App = () => {
   return (
     <Router>
       <Routes>
+        {/* Redirect root to /login */}
+        <Route path="/" element={<Navigate to="/login" />} />
+        
         <Route path="/login" element={<Login />} />
         <Route path="/student/signup" element={<Signup />} />
-        {/* You can add more routes here, like dashboards */}
         <Route path="/admin-signup" element={<AdminSignup />} />
         <Route path="/student/dashboard" element={<StudentDashboard />} />
         <Route path="/student/upload" element={<UploadProject />} /> 
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/student/export-projects" element={<ExportProjects />} />
-
       </Routes>
     </Router>
   );
